@@ -9,7 +9,7 @@ on:
 jobs:
 
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     env:
       HOST: localhost
       PORT: 5432
@@ -19,8 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        go_version: ['1.18', '1.17', '>=1.18']
-        os: ['ubuntu-latest']
+        go_version: '1.18'
     steps:
     - uses: actions/checkout@v3
 
@@ -49,10 +48,10 @@ jobs:
       run: go build -v main.go
     
     - name: Upload Main
-     uses: actions/upload-artifacts@v3.1.3
-     with:
-       name: program
-       path: main
+      uses: actions/upload-artifacts@v3.1.3
+      with:
+        name: program
+        path: main
 
   docker:
     needs: build
