@@ -48,11 +48,11 @@ jobs:
     - name: Build
       run: go build -v main.go
     
-  #  - name: Upload Main
-   #  uses: actions/upload-artifacts@v3
-    # with:
-     #  name: program
-      # path: main
+    - name: Upload Main
+     uses: actions/upload-artifacts@v3
+     with:
+       name: program
+       path: main
 
   docker:
     needs: build
