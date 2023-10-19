@@ -25,4 +25,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: gabex25/testeci
+        tags: gabex25/githubci
