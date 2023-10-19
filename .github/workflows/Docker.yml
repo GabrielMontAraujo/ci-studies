@@ -25,4 +25,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: GabrielMontAraujo/ci-studies
+        tags: gabrielmontaraujo/ci-studies
