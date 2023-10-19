@@ -18,3 +18,11 @@ jobs:
       with: 
         username: gabex25
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v3.0.0
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: GabrielMontAraujo/ci-studies
