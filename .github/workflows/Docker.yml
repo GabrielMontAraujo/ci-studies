@@ -25,4 +25,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: gabrielmontaraujo/ci-studies
+        tags: gabex25/testeci
